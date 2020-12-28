@@ -22,6 +22,9 @@
             <li class="nav-item">
               <router-link class="nav-link active" aria-current="page" to="/login">Login</router-link>
             </li>
+            <li class="nav-item">
+              <a  @click="logout()" class="nav-link">Logout</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -34,6 +37,12 @@
     data() {
       return {
         message: 'Navbar'
+      }
+    },
+    methods:{
+      logout(){
+        localStorage.removeItem('auth');
+        this.$router.push('/login');
       }
     }
   }
