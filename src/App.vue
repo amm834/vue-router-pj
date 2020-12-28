@@ -1,23 +1,17 @@
 <template>
-  <div id="app">
+  <div>
     <nav-bar></nav-bar>
-    <div>
-      Home
-    </div>
-    <div>Content</div>
-    <my-footer></my-footer>
+    <router-view></router-view>
+
   </div>
 </template>
 
 <script>
   import NavBar from './components/NavBar'
-  import MyFooter from './components/MyFooter'
-
   export default {
     name: 'App',
     components: {
-      NavBar,
-      MyFooter
+      NavBar
     }
   }
   </script>
